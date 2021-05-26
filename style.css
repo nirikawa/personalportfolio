@@ -2,6 +2,12 @@
   margin: 0;
 }
 
+.line {
+  border-bottom: 1px solid black;
+  width: 4em;
+  margin: 1em 0;
+}
+
 .long-line {
   border-bottom: 1px solid #cbcdcb;
   margin: 1em 0;
@@ -28,6 +34,25 @@ body {
   color: black;
   font-family: "Noto Sans", sans-serif;
 }
+
+body.night {
+  background-color: #4c5355;
+  color: #dd777a;
+}
+
+body.night .line {
+  border-bottom: 1px solid #cbcdcb;
+}
+
+body.night h1,
+p,
+i {
+  color: #cbcdcb;
+}
+
+body.night h2 {
+  color: #dd777a;
+}
 /* /=======================================*/
 
 /* Header */
@@ -50,6 +75,9 @@ header nav {
 nav li {
   list-style: none;
 }
+.home {
+  flex-grow: 3;
+}
 /* /============================================== */
 
 /* Section */
@@ -63,16 +91,12 @@ section {
   font-size: 1.5em;
   margin: 1em 0;
 }
-#intro h2 {
+h2 {
   font-size: 2em;
   color: #c44b4f;
   margin-bottom: 1em;
 }
 
-#intro .line {
-  border-bottom: 1px solid black;
-  width: 4em;
-}
 /* /============================================== */
 
 /* Projects Section */
@@ -89,7 +113,6 @@ section {
 .panel {
   border-radius: 50px;
   height: 32rem;
-  /* max-width: 30em; */
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -105,7 +128,6 @@ section {
 }
 
 .panel h3 {
-  /* position: absolute; */
   font-size: 1.5rem;
   margin-bottom: 1em;
 }
@@ -121,13 +143,10 @@ section {
 }
 
 .info-box {
-  /* background-color: rgba(0, 0, 0, 0); */
   width: 0;
   height: 12rem;
   padding: 2rem;
   opacity: 0;
-  /* opacity: 0; */
-  /* display: none; */
 }
 
 .panel.active .info-box {
@@ -150,3 +169,71 @@ section {
   margin-right: 0.25em;
 }
 /* /============================================== */
+
+/* Contact Section */
+#contact p {
+  font-size: 1.5rem;
+}
+/* /=============================================== */
+
+/* Night Mode Section */
+/* Edit Switch START */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* Edit Switch END */
+/* /=============================================== */

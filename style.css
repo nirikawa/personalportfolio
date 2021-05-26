@@ -30,7 +30,27 @@ nav li {
 }
 /* /============================================== */
 
+/* Section */
+section {
+  padding: 1em;
+}
+/* /============================================== */
+
 /* Intro */
-#intro {
+#intro p {
+  font-size: 1.5em;
+}
+#intro h2 {
+  font-size: 2em;
+  color: #c44b4f;
+}
+
+#intro .line {
+  border-bottom: 1px solid black;
+  width: 4em;
+}
+
+#intro .long-line {
+  border-bottom: 1px solid #cbcdcb;
 }
 /* /============================================== */

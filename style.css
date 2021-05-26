@@ -33,10 +33,16 @@ body {
   background-color: #eeede7;
   color: black;
   font-family: "Noto Sans", sans-serif;
+  transition: background-color 0.5s linear;
+}
+
+body p,
+body i {
+  color: black;
 }
 
 body.night {
-  background-color: #4c5355;
+  background-color: #5f5a5f;
   color: #dd777a;
 }
 
@@ -45,13 +51,17 @@ body.night .line {
 }
 
 body.night h1,
-p,
-i {
+body.night p,
+body.night i {
   color: #cbcdcb;
 }
 
 body.night h2 {
-  color: #dd777a;
+  color: #f7e188;
+}
+
+body.night a {
+  color: #cbcdcb;
 }
 /* /=======================================*/
 
@@ -63,6 +73,7 @@ header {
 }
 header h1 {
   flex-grow: 1;
+  font-family: "Barlow", sans-serif;
   /* margin-left: 2em; */
 }
 
@@ -158,6 +169,10 @@ h2 {
 
 #projects h2 {
   margin: 1em 0;
+}
+
+#projects p {
+  color: white;
 }
 /* /============================================== */
 

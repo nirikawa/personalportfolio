@@ -14,17 +14,14 @@ function removeActiveClasses() {
 // Night Mode START
 let checkBox = document.getElementById("night-toggle");
 checkBox.addEventListener('change', event => {
+  console.log("TOGGLE");
   if(checkBox.checked == true){
     // night mode is on
     // add night class
-    document.querySelectorAll(".canEdit").forEach(item => {
-      item.classList.remove('disabled');
-    });
+    document.querySelector("body").classList.add('night');
   }
   else {
-    document.querySelectorAll(".canEdit").forEach(item => {
-      item.classList.add('disabled');
-    });
+    document.querySelector("body").classList.remove('night');
   }
 });
 // Night Mode END
